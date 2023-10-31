@@ -1,6 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+/* eslint-disable global-require */
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontSize: {
@@ -39,6 +40,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      gridTemplateColumns: {
+        '13': 'repeat(13, minmax(0, 1fr))',
+      },
       minWidth: {
         xs: '431px',
         sm: '640px',
@@ -68,6 +72,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
     },
   },
+  plugins: [require('@tailwindcss/forms')],
 };
+
+export default config;

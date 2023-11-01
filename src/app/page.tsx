@@ -1,7 +1,9 @@
+import { LoginForm } from '@/app/ui/login-form';
+
 export default function Home() {
   return (
-    <div className="flex-center h-screen bg-gray-300">
-      <h4>Barebones TW Next Starter</h4>
+    <div className="flex-center h-screen flex-col bg-gray-300">
+      <LoginForm />
     </div>
   );
 }

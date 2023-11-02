@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 
 // !CHANGETHIS
 export const metadata: Metadata = {
-  title: 'CHANGE THIS',
-  description: 'CHANGE THIS',
+  title: 'Learn Nextjs',
+  description: 'Code along for learn Nextjs',
 };
 
 export default function RootLayout({

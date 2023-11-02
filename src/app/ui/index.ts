@@ -1,5 +1,5 @@
 export * from './skeletons';
-export * from './acme-logo';
+export * from './AcmeLogo';
 export * from './button';
 export * from './fonts';
 export * from './login-form';

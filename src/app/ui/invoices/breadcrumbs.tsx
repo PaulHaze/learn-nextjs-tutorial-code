@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 type Breadcrumb = {
   label: string;
   href: string;
-  acitve?: boolean;
+  active?: boolean;
 };
 
 type BreadcrumbsProps = {

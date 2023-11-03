@@ -2,7 +2,6 @@ import '@/styles/main.scss';
 
 import type { Metadata } from 'next';
 
-// !CHANGETHIS
 export const metadata: Metadata = {
   title: 'Learn Nextjs',
   description: 'Code along for learn Nextjs',

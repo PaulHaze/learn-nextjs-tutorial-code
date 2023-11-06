@@ -1,10 +1,10 @@
 /* eslint-disable */
 import Image from 'next/image';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
-import type { LatestInvoice } from '@/app/lib/definitions';
+import { lusitana } from '@/components/ui/fonts';
+import type { LatestInvoice } from '@/lib/definitions';
 
-import { cn } from '@/utils';
+// import { cn } from '@/utils';
 
 type LatestInvoicesProps = {
   latestInvoices: LatestInvoice[];

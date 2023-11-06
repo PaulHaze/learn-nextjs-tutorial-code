@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 import { cn } from '@/utils';
-import { generatePagination } from '@/app/lib/utils';
+import { generatePagination } from '@/lib/utils';
 
 type PaginationProps = {
   totalPages: number;

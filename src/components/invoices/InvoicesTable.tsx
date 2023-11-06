@@ -1,9 +1,12 @@
 import Image from 'next/image';
 
-import { UpdateInvoice, DeleteInvoice } from '@/app/ui/invoices/InvoiceButtons';
+import {
+  UpdateInvoice,
+  DeleteInvoice,
+} from '@/components/invoices/InvoiceButtons';
 import { InvoiceStatus } from './InvoiceStatus';
-import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
-import { fetchFilteredInvoices } from '@/app/lib/data';
+import { formatDateToLocal, formatCurrency } from '@/lib/utils';
+import { fetchFilteredInvoices } from '@/lib/data';
 
 type InvoicesTableProps = {
   query: string;

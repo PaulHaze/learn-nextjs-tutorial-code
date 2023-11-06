@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { lusitana } from '@/app/ui/fonts';
+import { lusitana } from '@/components/ui/fonts';
 import { cn } from '@/utils';
 
 type Breadcrumb = {

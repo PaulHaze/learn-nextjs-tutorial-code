@@ -9,9 +9,9 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 
-import { Button } from '@/app/ui';
+import { Button } from '@/components/ui';
 
-import type { CustomerField } from '@/app/lib/definitions';
+import type { CustomerField } from '@/lib/definitions';
 
 type CreateFormProps = {
   customers: CustomerField[];

@@ -7,9 +7,9 @@ import {
   CurrencyDollarIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import { Button } from '@/app/ui';
+import { Button } from '@/components/ui';
 
-import type { CustomerField, InvoiceForm } from '@/app/lib/definitions';
+import type { CustomerField, InvoiceForm } from '@/lib/definitions';
 
 type EditInvoiceFormProps = {
   invoice: InvoiceForm;

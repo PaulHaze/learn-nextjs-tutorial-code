@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
-import { Search } from '@/app/ui/Search';
-import type { FormattedCustomersTable } from '@/app/lib/definitions';
+import { Search } from '@/components/ui/Search';
+import type { FormattedCustomersTable } from '@/lib/definitions';
 
 type CustomersTableProps = {
   customers: FormattedCustomersTable[];

@@ -32,7 +32,7 @@
         "./public/*"
       ],
       "@Components": [
-        "./src/components/index"
+        "src/components/index"
       ]
     }
   },

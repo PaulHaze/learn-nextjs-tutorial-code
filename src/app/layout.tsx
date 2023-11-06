@@ -1,7 +1,7 @@
-import { inter } from '@/app/ui';
-import '@/styles/main.scss';
-
 import type { Metadata } from 'next';
+import { inter } from '@/app/ui';
+
+import '@/styles/main.scss';
 
 export const metadata: Metadata = {
   title: 'Learn Nextjs',

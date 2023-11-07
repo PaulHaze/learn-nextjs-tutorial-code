@@ -8,6 +8,17 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    'import/extensions': [
+      'warn',
+      'ignorePackages',
+      {
+        '': 'never',
+        ts: 'never',
+        tsx: 'never',
+        js: 'never',
+        jsx: 'never',
+      },
+    ],
     'prettier/prettier': [
       'error',
       {

@@ -5,7 +5,7 @@ const {
   customers,
   revenue,
   users,
-} = require('../app/lib/placeholder-data');
+} = require('../lib/placeholder-data');
 
 async function seedUsers(client) {
   try {

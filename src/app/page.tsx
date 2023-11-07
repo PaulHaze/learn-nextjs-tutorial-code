@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { AcmeLogo, lusitana } from '@/app/ui';
+import { AcmeLogo, lusitana } from '@/components/ui';
 
 export default function Home() {
   return (

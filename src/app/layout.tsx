@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { inter } from '@/app/ui';
+import { inter } from '@/components/ui';
 
 import '@/styles/main.scss';
 

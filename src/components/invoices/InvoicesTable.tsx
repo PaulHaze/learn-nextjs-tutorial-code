@@ -1,12 +1,13 @@
 import Image from 'next/image';
 
+import { formatDateToLocal, formatCurrency } from '@/lib/utils';
+import { fetchFilteredInvoices } from '@/lib/data';
+
 import {
   UpdateInvoice,
   DeleteInvoice,
 } from '@/components/invoices/InvoiceButtons';
 import { InvoiceStatus } from './InvoiceStatus';
-import { formatDateToLocal, formatCurrency } from '@/lib/utils';
-import { fetchFilteredInvoices } from '@/lib/data';
 
 type InvoicesTableProps = {
   query: string;

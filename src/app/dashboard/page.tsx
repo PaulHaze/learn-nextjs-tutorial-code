@@ -1,6 +1,6 @@
 export default function DashboardPage() {
   return (
-    <div>
+    <div className="">
       <p>DashboardPage Placeholder</p>
     </div>
   );

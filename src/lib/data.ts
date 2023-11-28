@@ -28,8 +28,8 @@ export async function fetchRevenue() {
     console.log('Data fetch complete after 3 seconds.');
 
     return data.rows;
-  } catch (error) {
-    console.error('Database Error:', error);
+  } catch (err) {
+    console.log('Database Error:', err);
     throw new Error('Failed to fetch revenue data.');
   }
 }

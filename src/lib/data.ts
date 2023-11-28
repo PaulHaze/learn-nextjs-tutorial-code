@@ -21,15 +21,15 @@ export async function fetchRevenue() {
     // Artificially delay a reponse for demo purposes.
     // Don't do this in real life :)
 
-    console.log('Fetching revenue data...');
+    // console.log('Fetching revenue data...');
     // eslint-disable-next-line no-promise-executor-return
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     const data = await sql<Revenue>`SELECT * FROM revenue`;
-    console.log('Data fetch complete after 3 seconds.');
+    // console.log('Data fetch complete after 3 seconds.');
 
     return data.rows;
   } catch (err) {
-    console.log('Database Error:', err);
+    console.error('Database Error:', err);
     throw new Error('Failed to fetch revenue data.');
   }
 }
@@ -87,7 +87,7 @@ export async function fetchCardData() {
     };
   } catch (error) {
     console.error('Database Error:', error);
-    throw new Error('Failed to card data.');
+    throw new Error('Failed to fetch card data.');
   }
 }
 

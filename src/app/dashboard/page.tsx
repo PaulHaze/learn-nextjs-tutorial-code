@@ -4,13 +4,6 @@ import { fetchRevenue, fetchLatestInvoices, fetchCardData } from '@/lib/data';
 
 import { lusitana } from '@/components/ui';
 
-/* 
-      numberOfCustomers,
-      numberOfInvoices,
-      totalPaidInvoices,
-      totalPendingInvoices,
-*/
-
 export default async function DashboardPage() {
   const revenue = await fetchRevenue();
   const latestInvoices = await fetchLatestInvoices();

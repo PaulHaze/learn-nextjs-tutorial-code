@@ -4,7 +4,7 @@ import { fetchRevenue, fetchLatestInvoices, fetchCardData } from '@/lib/data';
 
 import { lusitana } from '@/components/ui';
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
   const revenue = await fetchRevenue();

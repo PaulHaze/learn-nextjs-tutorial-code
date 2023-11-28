@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Image from 'next/image';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/components/ui/fonts';

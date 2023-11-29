@@ -1,13 +1,13 @@
+import { Suspense } from 'react';
 import { Card, RevenueChart, LatestInvoices } from '@/components/dashboard';
 
-import { fetchRevenue, fetchLatestInvoices, fetchCardData } from '@/lib/data';
+import { RevenueChartSkeleton, lusitana } from '@/components/ui';
 
-import { lusitana } from '@/components/ui';
+import { fetchLatestInvoices, fetchCardData } from '@/lib/data';
 
 // export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  const revenue = await fetchRevenue();
   const latestInvoices = await fetchLatestInvoices();
   const {
     numberOfCustomers,
@@ -30,7 +30,10 @@ export default async function DashboardPage() {
         />
       </div>
       <div className="grid-grid-cols-1 mt-6 gap-6 md:grid-cols-5 lg:grid-cols-8">
-        <RevenueChart revenue={revenue} />
+        <Suspense fallback={<RevenueChartSkeleton />}>
+          <RevenueChart />
+        </Suspense>
+        {/* <RevenueChart revenue={revenue} /> */}
         <LatestInvoices latestInvoices={latestInvoices} />
       </div>
     </main>

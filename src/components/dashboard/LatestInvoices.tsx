@@ -1,14 +1,9 @@
 import Image from 'next/image';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/components/ui/fonts';
-// import type { LatestInvoice } from '@/lib/definitions';
 import { fetchLatestInvoices } from '@/lib/data';
 
 import { cn } from '@/utils';
-
-// type LatestInvoicesProps = {
-//   latestInvoices: LatestInvoice[];
-// };
 
 export async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();

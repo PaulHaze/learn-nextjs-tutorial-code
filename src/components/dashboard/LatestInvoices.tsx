@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/components/ui/fonts';
-import type { LatestInvoice } from '@/lib/definitions';
+// import type { LatestInvoice } from '@/lib/definitions';
+import { fetchLatestInvoices } from '@/lib/data';
 
 import { cn } from '@/utils';
 
-type LatestInvoicesProps = {
-  latestInvoices: LatestInvoice[];
-};
+// type LatestInvoicesProps = {
+//   latestInvoices: LatestInvoice[];
+// };
 
-export async function LatestInvoices({ latestInvoices }: LatestInvoicesProps) {
+export async function LatestInvoices() {
+  const latestInvoices = await fetchLatestInvoices();
   return (
     <div className="mt-6 flex w-full flex-col md:col-span-4 lg:col-span-4">
       <h2 className={`${lusitana.className} mb-2 text-xl md:text-2xl`}>

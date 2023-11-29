@@ -1,14 +1,18 @@
 import { Suspense } from 'react';
 import { Card, RevenueChart, LatestInvoices } from '@/components/dashboard';
 
-import { RevenueChartSkeleton, lusitana } from '@/components/ui';
+import {
+  RevenueChartSkeleton,
+  LatestInvoicesSkeleton,
+  lusitana,
+} from '@/components/ui';
 
-import { fetchLatestInvoices, fetchCardData } from '@/lib/data';
+import { fetchCardData } from '@/lib/data';
 
 // export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  const latestInvoices = await fetchLatestInvoices();
+  // const latestInvoices = await fetchLatestInvoices();
   const {
     numberOfCustomers,
     numberOfInvoices,
@@ -33,8 +37,9 @@ export default async function DashboardPage() {
         <Suspense fallback={<RevenueChartSkeleton />}>
           <RevenueChart />
         </Suspense>
-        {/* <RevenueChart revenue={revenue} /> */}
-        <LatestInvoices latestInvoices={latestInvoices} />
+        <Suspense fallback={<LatestInvoicesSkeleton />}>
+          <LatestInvoices />
+        </Suspense>
       </div>
     </main>
   );

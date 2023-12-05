@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 
 import {
-  Pagination,
+  // Pagination,
   InvoicesTable,
   CreateInvoice,
 } from '@/components/invoices';

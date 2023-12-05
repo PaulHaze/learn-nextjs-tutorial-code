@@ -7,7 +7,17 @@ import {
 } from '@/components/invoices';
 import { Search, lusitana, InvoicesTableSkeleton } from '@/components/ui';
 
-export default async function InvoicesPage() {
+export default async function InvoicesPage({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+  };
+}) {
+  const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
+
   return (
     <div className="w-full">
       <div className="flex w-full items-center justify-between">
@@ -17,9 +27,9 @@ export default async function InvoicesPage() {
         <Search placeholder="Search invoices..." />
         <CreateInvoice />
       </div>
-      {/*  <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
-        <Table query={query} currentPage={currentPage} />
-      </Suspense> */}
+      <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
+        <InvoicesTable query={query} currentPage={currentPage} />
+      </Suspense>
       <div className="mt-5 flex w-full justify-center">
         {/* <Pagination totalPages={totalPages} /> */}
       </div>
